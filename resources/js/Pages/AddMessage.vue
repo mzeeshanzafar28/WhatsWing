@@ -113,7 +113,7 @@ const dropdownItems = ref([
             <div class="sm:col-span-2 ">
               <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone No.</label>
 
-              <select ref="phoneRef" class="bg-blue-400 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              <select ref="phoneRef" class="bg-blue-400 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Type phone number" required="true" multiple="multiple" name="phone[]" id="phone" >
               </select>
 
@@ -122,7 +122,7 @@ const dropdownItems = ref([
             <div>
             <label for="priority" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Priority (Optional)</label>
             <select id="priority"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-60 p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500">
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-60 p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-primary-500 dark:focus:border-primary-500">
               <option selected="">Select Priority</option>
               <option v-for="item in dropdownItems" :value="item.name">{{ item.name }}</option>
             </select>
@@ -132,24 +132,24 @@ const dropdownItems = ref([
           <div>
             <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Schedule (Optional)</label>
             <input type="date" id="date" name="date"
-              class="bg-gray-50 border sm:w-36 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-60 p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500">
+              class="bg-gray-50 border sm:w-36 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-60 p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-primary-500 dark:focus:border-primary-500">
             
               <input type="time" id="time" name="time"
-              class="bg-gray-50 border sm:w-36 border-gray-300 mt-2 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-60 p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500">
+              class="bg-gray-50 border sm:w-36 border-gray-300 mt-2 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-60 p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-primary-500 dark:focus:border-primary-500">
             </div>
 
 
             <div class="sm:col-span-2">
               <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
               <textarea id="message" rows="8" required="true"
-                class="block p-2.5 lg:w-full md:w-full sm:w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="block p-2.5 lg:w-full md:w-full sm:w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Your Message Here"></textarea>
             </div>
 
             <div class="sm:col-span-2">
               <label for="data" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Data (Optional)</label>
               <textarea id="data" rows="3"
-                class="block p-2.5 lg:w-full md:w-full sm:w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="block p-2.5 lg:w-full md:w-full sm:w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Enter Any Additional Data Here"></textarea>
                 <small class="text-yellow-700">ⓘ Use Json Format for Data</small>
 
@@ -171,7 +171,7 @@ const dropdownItems = ref([
 <style>
 .select2-selection{
   background-color:rgba(249, 250, 251, 0.822) !important;
-  color: white;
+  color: gray;
   width: 100% !important;
   height: 80px !important
 }

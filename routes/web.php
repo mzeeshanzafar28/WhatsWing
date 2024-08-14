@@ -82,10 +82,10 @@ Route::middleware([
 ])->prefix('webapi')->group(function () {
 
     Route::post('/addMessage', [MessageController::class, 'addMessage']);
-    Route::post('/updatemMessage/{id}', [MessageController::class, 'updateMessage']);
-    Route::post('/deleteMessage/{id}', [MessageController::class, 'deleteMessage']);
+    Route::post('/updateMessage', [MessageController::class, 'updateMessage']);
+    Route::post('/deleteMessage', [MessageController::class, 'deleteMessage']);
     Route::get('/getAllMessages', [MessageController::class, 'getAllMessages']);
-    Route::post('/getMessageById/{id}', [MessageController::class, 'getMessageById']);
+    Route::post('/getMessageById', [MessageController::class, 'getMessageById']);
     Route::get('/getMessagesByStatus/{status}', [MessageController::class, 'getMessagesByStatus']);
     Route::post('/getMessageCountsByApiKey', [MessageController::class, 'getMessageCountsByApiKey']);
 

@@ -45,8 +45,13 @@ class MessageController extends Controller
     ], 201);
    }
 
-   public function updateMessage(Request $request, $id)
+   public function updateMessage(Request $request)
 {
+    $id = $request->validate([
+        'id' => 'required|int'
+    ])['id'];
+    
+
     $message = WhatsMateMessage::findOrFail($id);
 
     if ($message->user_id !== auth()->id()) {
@@ -56,12 +61,12 @@ class MessageController extends Controller
     }
 
     $validatedData = $request->validate([
-        'api_key' => 'required|string|max:255',
+        'api_key' => 'string|max:255',
         'phone_no' => 'required|string',
         'message' => 'required|string',
         'priority' => 'int',
         'type'=> 'string',
-        'data' => 'string',
+        'data' => 'required|string',
         'scheduled_at' => 'nullable|date_format:Y-m-d H:i:s', 
     ]);
 
@@ -74,8 +79,12 @@ class MessageController extends Controller
     ]);
 }
 
-public function deleteMessage($id)
+public function deleteMessage(Request $request)
 {
+    $id = $request->validate([
+        'id' => 'required|int'
+    ])['id'];
+    
     $message = WhatsMateMessage::findOrFail($id);
 
     if ($message->user_id !== auth()->id()) {
@@ -101,8 +110,12 @@ public function getAllMessages()
     ]);
 }
 
-public function getMessageById($id)
+public function getMessageById(Request $request)
 {
+    $id = $request->validate([
+        'id' => 'required|int'
+    ])['id'];
+
     $message = WhatsMateMessage::where('id', $id)
     ->where('user_id', auth()->id())
     ->firstOrFail();

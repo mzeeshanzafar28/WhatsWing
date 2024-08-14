@@ -17,19 +17,19 @@ Route::post('logout',[APIAuthController::class,'logout'])
     Route::post('/addMessage', [MessageController::class, 'addMessage']);
 
     // Update Message
-    Route::post('/updatemMessage/{id}', [MessageController::class, 'updateMessage']);
+    Route::post('/updateMessage', [MessageController::class, 'updateMessage']);
 
     // Delete Message
-    Route::post('/deleteMessage/{id}', [MessageController::class, 'deleteMessage']);
+    Route::post('/deleteMessage', [MessageController::class, 'deleteMessage']);
 
     // Get All Messages
     Route::post('/getAllMessages', [MessageController::class, 'getAllMessages']);
 
     // Get Message by ID
-    Route::post('/getMessageById/{id}', [MessageController::class, 'getMessageById']);
+    Route::post('/getMessageById', [MessageController::class, 'getMessageById']);
 
     // Get Messages by Status
-    Route::post('/getMessagesByStatus/{status}', [MessageController::class, 'getMessagesByStatus']);
+    Route::get('/getMessagesByStatus/{status}', [MessageController::class, 'getMessagesByStatus']);
 
     // Get Message Counts by API Key
     Route::post('/getMessageCountsByApiKey', [MessageController::class, 'getMessageCountsByApiKey']);
