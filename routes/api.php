@@ -4,7 +4,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\APIAuthController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\ConnectionsController;
 
+//move later
+// Route::get('/getServer}',[ConnectionsController::class, 'get_server']);
+// Route::get('/assignServer/{user_id}',[ConnectionsController::class, 'assign_server']);
 
 Route::post('register',[APIAuthController::class,'register']);
 Route::post('login',[APIAuthController::class,'login']);

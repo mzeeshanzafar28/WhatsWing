@@ -17,7 +17,7 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
       <div class="w-full container mx-auto">
         <div class="w-full flex items-center justify-between">
           <a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-            Whats<span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">Mate</span>
+            Whats<span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">Matic</span>
           </a>
 
           <div class="flex w-1/2 justify-end content-center">
@@ -64,7 +64,7 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
                 class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
                 id="emailaddress"
                 type="text"
-                placeholder="someone@whatsmate.com"
+                placeholder="someone@whatsmatic.com"
               />
             </div>
 
@@ -96,7 +96,7 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 
         <!--Footer-->
         <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
-          <a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; WhatsMate 2024</a>
+          <a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; WhatsMatic 2024</a>
           - copyright
           <a class="text-gray-500 no-underline hover:no-underline" href="https://axontech.pk">Axon Technologies PK</a>
         </div>

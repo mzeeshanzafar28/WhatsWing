@@ -42,7 +42,7 @@ const props = defineProps({
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="sm:text-center">
                 <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl">
-                    Welcome to WhatsMate
+                    Welcome to WhatsMatic
                 </h2>
                 <p class="m-4 text-xl text-gray-500 dark:text-gray-300">
                     Automate your daily WhatsApp tasks in a click.
@@ -66,7 +66,7 @@ const props = defineProps({
                             <div class="text-6xl text-primary font-bold mb-3">😉 Made Easy</div>
 
                             <p class="text-white ">
-                                Congrats on making so far! You're in safe hands now 😎. This is WhatsMate! The grand
+                                Congrats on making so far! You're in safe hands now 😎. This is WhatsMatic! The grand
                                 tool for WhatsApp Automation. All the work on your finger tips 🥸.
                             </p>
                         </div>
@@ -88,11 +88,11 @@ const props = defineProps({
                         <h2 class="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl">
                             Hey 👋 This
                             is
-                            <br class="block sm:hidden" />WhatsMate
+                            <br class="block sm:hidden" />WhatsMatic
                         </h2>
                         <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-gray-300 md:mt-8">
                             Axon Tech is a pioneering technology company 🌟 known for developing innovative solutions
-                            that simplify everyday tasks. One of our standout creations is <strong>WhatsMate</strong>, a
+                            that simplify everyday tasks. One of our standout creations is <strong>WhatsMatic</strong>, a
                             powerful
                             WhatsApp automation tool designed to streamline and enhance daily WhatsApp activities 📱
                         </p>

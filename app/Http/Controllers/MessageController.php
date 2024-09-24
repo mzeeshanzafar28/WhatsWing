@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\WhatsMateMessage;
+use App\Models\WhatsMaticMessage;
 
 use Illuminate\Support\Facades\DB;
 
@@ -25,7 +25,7 @@ class MessageController extends Controller
     
     $messages = [];
     foreach ($validatedData['phone_no'] as $phone_no) {
-        $message = WhatsMateMessage::create([
+        $message = WhatsMaticMessage::create([
             'user_id' => auth()->id(),
             'api_key' => $validatedData['api_key'] ?? null,
             'phone_no' => $phone_no,
@@ -52,7 +52,7 @@ class MessageController extends Controller
     ])['id'];
     
 
-    $message = WhatsMateMessage::findOrFail($id);
+    $message = WhatsMaticMessage::findOrFail($id);
 
     if ($message->user_id !== auth()->id()) {
         return response()->json([
@@ -85,7 +85,7 @@ public function deleteMessage(Request $request)
         'id' => 'required|int'
     ])['id'];
     
-    $message = WhatsMateMessage::findOrFail($id);
+    $message = WhatsMaticMessage::findOrFail($id);
 
     if ($message->user_id !== auth()->id()) {
         return response()->json([
@@ -102,7 +102,7 @@ public function deleteMessage(Request $request)
 
 public function getAllMessages()
 {
-    $messages = WhatsMateMessage::where('user_id', auth()->id())->get();
+    $messages = WhatsMaticMessage::where('user_id', auth()->id())->get();
 
     return response()->json([
         'message' => 'All messages retrieved successfully',
@@ -116,7 +116,7 @@ public function getMessageById(Request $request)
         'id' => 'required|int'
     ])['id'];
 
-    $message = WhatsMateMessage::where('id', $id)
+    $message = WhatsMaticMessage::where('id', $id)
     ->where('user_id', auth()->id())
     ->firstOrFail();
 
@@ -128,7 +128,7 @@ public function getMessageById(Request $request)
 
 public function getMessagesByStatus($status)
 {
-    $messages = WhatsMateMessage::where('status', $status)
+    $messages = WhatsMaticMessage::where('status', $status)
             ->where('user_id', auth()->id())
             ->get();
 
@@ -140,7 +140,7 @@ public function getMessagesByStatus($status)
 
 public function getMessageCountsByApiKey()
 {
-    $messageCounts = WhatsMateMessage::select('api_key', DB::raw('count(*) as total'))
+    $messageCounts = WhatsMaticMessage::select('api_key', DB::raw('count(*) as total'))
             ->where('user_id', auth()->id())
             ->groupBy('api_key')
             ->pluck('total', 'api_key');

@@ -8,7 +8,7 @@
         
 
 
-        <title inertia>{{ config('app.name', 'WhatsMate') }}</title>
+        <title inertia>{{ config('app.name', 'WhatsMatic') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

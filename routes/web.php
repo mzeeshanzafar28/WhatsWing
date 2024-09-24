@@ -2,12 +2,19 @@
 
 use App\Http\Controllers\APIAuthController;
 use App\Http\Controllers\APIsController;
+use App\Http\Controllers\ConnectionsController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MessageController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+//move later
+// Route::get('/getServer}',[ConnectionsController::class, 'get_server']);
+// Route::get('/assignServer/{user_id}',[ConnectionsController::class, 'assign_server']);
+
+Route::post('/serverConfirmed',[ConnectionsController::class, 'insert_entry']);
+Route::post('/checkConnection',[ConnectionsController::class,'connect_whatsapp']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -88,10 +95,12 @@ Route::middleware([
     Route::post('/getMessageById', [MessageController::class, 'getMessageById']);
     Route::get('/getMessagesByStatus/{status}', [MessageController::class, 'getMessagesByStatus']);
     Route::post('/getMessageCountsByApiKey', [MessageController::class, 'getMessageCountsByApiKey']);
+    
+
 
 });
 
-// Route::get('/{path?}', function($path = null){         return Inertia::render('Welcome');     })->where('path', '.*'); 
 Route::get('/{path?}', function($path = null){                     return abort(404);
 })->where('path', '.*'); 
+
 
