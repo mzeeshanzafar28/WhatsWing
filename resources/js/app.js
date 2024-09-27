@@ -16,7 +16,7 @@ import "vue-good-table-next/dist/vue-good-table-next.css";
 
 import PrimeVue from "primevue/config";
 
-const appName = import.meta.env.VITE_APP_NAME || 'WhatsMatic';
+const appName = import.meta.env.VITE_APP_NAME || 'WhatsWing';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

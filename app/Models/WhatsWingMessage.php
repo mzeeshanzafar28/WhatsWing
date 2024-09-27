@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class WhatsMaticMessage extends Model
+class WhatsWingMessage extends Model
 {
     use HasFactory;
 
